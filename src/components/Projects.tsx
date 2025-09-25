@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Calendar, Tag, ArrowRight } from 'lucide-react';
+import { Tag, ArrowRight } from 'lucide-react';
 import { PROJECTS } from '../utils/constants';
 
 const Projects: React.FC = () => {
