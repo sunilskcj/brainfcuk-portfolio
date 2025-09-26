@@ -57,50 +57,54 @@
     @apply bg-raycast-100 dark:bg-raycast-800 border border-raycast-300 dark:border-raycast-700 text-raycast-900 dark:text-raycast-100 px-6 py-3 rounded-xl font-medium hover:bg-raycast-200 dark:hover:bg-raycast-700 transition-all duration-200;
   }
 
-  /* Pure water effect with minimal blur for readability */
+  /* iOS 26-inspired ultra-transparent refractive cards */
   .card {
-    @apply rounded-2xl transition-all duration-500 p-6;
-    backdrop-filter: blur(1px) saturate(120%) contrast(105%) brightness(102%);
-    -webkit-backdrop-filter: blur(1px) saturate(120%) contrast(105%) brightness(102%);
-    background: transparent;
-    border: none;
+    @apply rounded-2xl border border-white/10 dark:border-white/5 transition-all duration-300 p-6;
+    backdrop-filter: blur(16px) saturate(200%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.008) 50%,
+      rgba(255, 255, 255, 0.025) 100%);
     box-shadow:
-      0 0 0 0.5px rgba(255,255,255,0.05),
-      0 2px 15px rgba(255,255,255,0.03),
-      inset 0 0 0 0.25px rgba(255,255,255,0.08);
-    transform: perspective(1000px) rotateX(0.2deg) scale(1.0005);
-    filter:
-      drop-shadow(0 1px 2px rgba(255,255,255,0.08))
-      contrast(103%)
-      saturate(108%);
-    animation: waterFloat 8s ease-in-out infinite;
-    transform-origin: center center;
+      0 4px 24px rgba(0, 0, 0, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
   .card-glass {
-    @apply rounded-2xl transition-all duration-500 p-6;
-    backdrop-filter: blur(1.5px) saturate(130%) contrast(108%) brightness(104%);
-    -webkit-backdrop-filter: blur(1.5px) saturate(130%) contrast(108%) brightness(104%);
-    background: transparent;
-    border: none;
+    @apply rounded-2xl border border-white/20 dark:border-white/10 transition-all duration-300 p-6;
+    backdrop-filter: blur(20px) saturate(220%);
+    -webkit-backdrop-filter: blur(20px) saturate(220%);
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.01) 50%,
+      rgba(255, 255, 255, 0.035) 100%);
     box-shadow:
-      0 0 0 0.75px rgba(255,255,255,0.06),
-      0 3px 20px rgba(255,255,255,0.04),
-      inset 0 0 0 0.5px rgba(255,255,255,0.1);
-    transform: perspective(1200px) rotateX(0.3deg) rotateY(0.1deg) scale(1.001);
-    filter:
-      drop-shadow(0 2px 4px rgba(255,255,255,0.1))
-      drop-shadow(0 -1px 2px rgba(255,255,255,0.06))
-      contrast(105%)
-      saturate(112%);
-    animation: waterRipple 10s ease-in-out infinite;
-    transform-origin: center center;
+      0 6px 32px rgba(0, 0, 0, 0.03),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.02);
   }
 
-  /* Pure water maintains transparency in dark mode */
-  .dark .card,
+  /* Dark theme adjustments for ultra-transparency */
+  .dark .card {
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.025) 0%,
+      rgba(255, 255, 255, 0.005) 50%,
+      rgba(255, 255, 255, 0.018) 100%);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
   .dark .card-glass {
-    background: transparent;
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.008) 50%,
+      rgba(255, 255, 255, 0.025) 100%);
+    box-shadow:
+      0 6px 32px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.015);
   }
 
   /* Raycast-style backgrounds */
@@ -249,39 +253,4 @@
   margin: 0 auto;
   letter-spacing: .15em;
   animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
-}
-
-/* Subtle water animations with minimal blur */
-@keyframes waterRipple {
-  0%, 100% {
-    transform: perspective(1200px) rotateX(0.3deg) rotateY(0.1deg) scale(1.001);
-    backdrop-filter: blur(1.5px) saturate(130%) contrast(108%) brightness(104%);
-  }
-  25% {
-    transform: perspective(1200px) rotateX(0.2deg) rotateY(0.15deg) scale(1.0015);
-    backdrop-filter: blur(1px) saturate(125%) contrast(106%) brightness(106%);
-  }
-  50% {
-    transform: perspective(1200px) rotateX(0.4deg) rotateY(0.05deg) scale(1.002);
-    backdrop-filter: blur(2px) saturate(135%) contrast(110%) brightness(102%);
-  }
-  75% {
-    transform: perspective(1200px) rotateX(0.25deg) rotateY(0.12deg) scale(1.0008);
-    backdrop-filter: blur(1.2px) saturate(128%) contrast(107%) brightness(105%);
-  }
-}
-
-@keyframes waterFloat {
-  0%, 100% {
-    transform: perspective(1000px) rotateX(0.2deg) scale(1.0005);
-    backdrop-filter: blur(1px) saturate(120%) contrast(105%) brightness(102%);
-  }
-  33% {
-    transform: perspective(1000px) rotateX(0.15deg) rotateY(0.05deg) scale(1.001);
-    backdrop-filter: blur(0.8px) saturate(118%) contrast(104%) brightness(103%);
-  }
-  66% {
-    transform: perspective(1000px) rotateX(0.25deg) rotateY(-0.02deg) scale(1.0008);
-    backdrop-filter: blur(1.2px) saturate(122%) contrast(106%) brightness(101%);
-  }
 }
