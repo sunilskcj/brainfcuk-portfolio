@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Code2 } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollToContact = () => {
