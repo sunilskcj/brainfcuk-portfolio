@@ -57,13 +57,54 @@
     @apply bg-raycast-100 dark:bg-raycast-800 border border-raycast-300 dark:border-raycast-700 text-raycast-900 dark:text-raycast-100 px-6 py-3 rounded-xl font-medium hover:bg-raycast-200 dark:hover:bg-raycast-700 transition-all duration-200;
   }
 
-  /* Raycast-style cards */
+  /* iOS 26-inspired ultra-transparent refractive cards */
   .card {
-    @apply bg-white dark:bg-raycast-850 rounded-2xl border border-raycast-200 dark:border-raycast-800 shadow-sm hover:shadow-md transition-all duration-200 p-6;
+    @apply rounded-2xl border border-white/10 dark:border-white/5 transition-all duration-300 p-6;
+    backdrop-filter: blur(16px) saturate(200%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.008) 50%,
+      rgba(255, 255, 255, 0.025) 100%);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
   .card-glass {
-    @apply backdrop-blur-xl bg-white/80 dark:bg-raycast-900/80 rounded-2xl border border-raycast-200/50 dark:border-raycast-800/50 shadow-sm hover:shadow-md transition-all duration-200 p-6;
+    @apply rounded-2xl border border-white/20 dark:border-white/10 transition-all duration-300 p-6;
+    backdrop-filter: blur(20px) saturate(220%);
+    -webkit-backdrop-filter: blur(20px) saturate(220%);
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.01) 50%,
+      rgba(255, 255, 255, 0.035) 100%);
+    box-shadow:
+      0 6px 32px rgba(0, 0, 0, 0.03),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+  }
+
+  /* Dark theme adjustments for ultra-transparency */
+  .dark .card {
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.025) 0%,
+      rgba(255, 255, 255, 0.005) 50%,
+      rgba(255, 255, 255, 0.018) 100%);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .dark .card-glass {
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.008) 50%,
+      rgba(255, 255, 255, 0.025) 100%);
+    box-shadow:
+      0 6px 32px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.015);
   }
 
   /* Raycast-style backgrounds */
@@ -123,67 +164,74 @@
     @apply backdrop-blur-md bg-white/10 dark:bg-white/5 border border-white/20;
   }
 
-  /* Apple-inspired Liquid Glass Effects */
+  /* iOS 26-inspired ultra-transparent refractive glass effects */
   .liquid-glass {
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px) saturate(220%);
+    -webkit-backdrop-filter: blur(16px) saturate(220%);
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.025) 0%,
+      rgba(255, 255, 255, 0.008) 50%,
+      rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+      0 4px 24px rgba(0, 0, 0, 0.015),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .liquid-glass-hover {
-    backdrop-filter: blur(24px) saturate(200%);
-    -webkit-backdrop-filter: blur(24px) saturate(200%);
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px) saturate(240%);
+    -webkit-backdrop-filter: blur(20px) saturate(240%);
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.012) 50%,
+      rgba(255, 255, 255, 0.03) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+      0 8px 32px rgba(0, 0, 0, 0.025),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
   }
 
   .liquid-glass-dark {
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px) saturate(200%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(255, 255, 255, 0.005) 50%,
+      rgba(255, 255, 255, 0.015) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+      0 6px 24px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .liquid-glass-button {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(14px) saturate(200%);
+    -webkit-backdrop-filter: blur(14px) saturate(200%);
     background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(255, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 50%,
+      rgba(255, 255, 255, 0.025) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow:
-      0 4px 16px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      0 3px 12px rgba(0, 0, 0, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .liquid-glass-card {
-    backdrop-filter: blur(24px) saturate(200%);
-    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    backdrop-filter: blur(18px) saturate(210%);
+    -webkit-backdrop-filter: blur(18px) saturate(210%);
     background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.02) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+      rgba(255, 255, 255, 0.028) 0%,
+      rgba(255, 255, 255, 0.009) 50%,
+      rgba(255, 255, 255, 0.022) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.09);
     box-shadow:
-      0 16px 48px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+      0 6px 32px rgba(0, 0, 0, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.065);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

@@ -36,9 +36,14 @@ const Navigation: React.FC = () => {
     <nav className="fixed w-full top-0 z-50 flex justify-center pt-4">
       <div className={`transition-all duration-300 rounded-2xl px-6 py-3 ${
         isScrolled
-          ? 'backdrop-blur-xl bg-white/80 dark:bg-raycast-900/80 border border-raycast-200/50 dark:border-raycast-800/50 shadow-lg'
+          ? 'backdrop-blur-lg bg-white/[0.02] dark:bg-white/[0.015] border border-white/10 dark:border-white/5 shadow-sm'
           : 'bg-transparent'
-      }`}>
+      }`} style={isScrolled ? {
+        backdropFilter: 'blur(16px) saturate(220%)',
+        WebkitBackdropFilter: 'blur(16px) saturate(220%)',
+        background: 'linear-gradient(135deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.008) 50%, rgba(255,255,255,0.02) 100%)',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.08)'
+      } : {}}>
         <div className="flex justify-between items-center min-w-[800px] max-w-4xl">
           {/* Logo */}
           <div className="flex-shrink-0">
