@@ -132,16 +132,16 @@ export const PROJECTS: Project[] = [
 ];
 
 export const COMPANY_INFO = {
-  name: 'BrainFcuk',
-  tagline: 'Innovative Web & Mobile Solutions',
+  name: 'Vox',
+  tagline: 'Your shortcut to digital excellence',
   description: 'We are a team of young, passionate professionals with 4+ years of industry experience, dedicated to building trust and hustling hard for the future. We specialize in cutting-edge technologies and deliver exceptional digital solutions.',
-  mission: 'To empower startups and businesses with innovative technology solutions that drive growth and success.',
-  email: 'contact@brainfcuk.dev',
+  mission: 'To empower startups and businesses with innovative technology solutions that drive growth, build trust, and create lasting impact in their industries.',
+  email: 'contact@vox.dev',
   phone: '+1 (555) 123-4567',
   address: 'Remote-First Company',
   social: {
-    github: 'https://github.com/brainfcuk',
-    linkedin: 'https://linkedin.com/company/brainfcuk',
-    twitter: 'https://twitter.com/brainfcuk'
+    github: 'https://github.com/vox-dev',
+    linkedin: 'https://linkedin.com/company/vox-dev',
+    twitter: 'https://twitter.com/vox_dev'
   }
 };

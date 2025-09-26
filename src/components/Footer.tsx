@@ -30,15 +30,15 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="gradient-bg border-t border-raycast-200 dark:border-raycast-800">
       {/* Main Footer */}
       <div className="container-custom py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <span className="text-3xl font-bold text-gradient">BrainFcuk</span>
-              <Code2 className="w-8 h-8 ml-3 text-primary-400" />
+              <span className="text-2xl font-bold text-raycast-900 dark:text-white">Vox</span>
+              <Code2 className="w-6 h-6 ml-3 text-primary-500" />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
               Young, passionate professionals with 4+ years of experience building innovative
@@ -49,8 +49,8 @@ const Footer: React.FC = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-gray-300">
                 <Mail className="w-5 h-5 mr-3 text-primary-400" />
-                <a href="mailto:hello@brainfcuk.dev" className="hover:text-primary-400 transition-colors">
-                  hello@brainfcuk.dev
+                <a href="mailto:contact@vox.dev" className="hover:text-primary-500 transition-colors">
+                  contact@vox.dev
                 </a>
               </div>
               <div className="flex items-center text-gray-300">
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="https://github.com/brainfcuk"
+                href="https://github.com/vox-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-primary-600 transition-colors"
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/company/brainfcuk"
+                href="https://linkedin.com/company/vox-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-primary-600 transition-colors"

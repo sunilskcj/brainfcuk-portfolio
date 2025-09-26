@@ -33,14 +33,14 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-white dark:bg-gray-800">
+    <section id="about" className="section-padding gradient-bg">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About <span className="text-gradient">BrainFcuk</span>
+        <div className="text-center mb-20">
+          <h2 className="text-heading mb-6">
+            About <span className="text-gradient">Vox</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-body-lg max-w-3xl mx-auto">
             We're not just another development agency. We're young, passionate professionals
             who hustle hard to build trust through innovation.
           </p>
@@ -55,9 +55,9 @@ const About: React.FC = () => {
             </h3>
             <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-gray-900 dark:text-white">BrainFcuk</strong> was born from a simple belief:
+                <strong className="text-raycast-900 dark:text-white">Vox</strong> was born from a simple belief:
                 technology should solve real problems, not create new ones. As young professionals with
-                <strong className="text-primary-600 dark:text-primary-400"> 4+ years of industry experience</strong>,
+                <strong className="text-primary-600"> 4+ years of industry experience</strong>,
                 we've seen the gap between what businesses need and what they get.
               </p>
               <p>
@@ -158,8 +158,8 @@ const About: React.FC = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="liquid-glass-dark rounded-2xl p-8 md:p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-6">Why Choose BrainFcuk?</h3>
+        <div className="card-glass rounded-3xl p-8 md:p-12 text-center border-2 border-primary-200 dark:border-primary-800">
+          <h3 className="text-heading mb-8 text-raycast-900 dark:text-white">Why Choose Vox?</h3>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="text-2xl font-bold mb-2">🚀 Fast Delivery</div>
@@ -184,7 +184,7 @@ const About: React.FC = () => {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="liquid-glass-button text-white px-8 py-4 rounded-xl font-semibold text-lg hover:liquid-glass-hover transition-colors inline-flex items-center space-x-2"
+            className="btn-primary px-8 py-4 text-base inline-flex items-center space-x-2"
           >
             <span>Let's Build Something Amazing</span>
             <Heart className="w-5 h-5" />
