@@ -35,7 +35,7 @@ const Navigation: React.FC = () => {
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled
-        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
+        ? 'liquid-glass'
         : 'bg-transparent'
     }`}>
       <div className="container-custom">
@@ -66,7 +66,7 @@ const Navigation: React.FC = () => {
           <div className="flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+              className="p-2 rounded-lg liquid-glass hover:liquid-glass-hover transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {isDarkMode ? (
@@ -95,7 +95,7 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 rounded-lg mt-2 shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 liquid-glass rounded-lg mt-2">
               {navItems.map((item) => (
                 <button
                   key={item.name}

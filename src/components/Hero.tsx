@@ -55,15 +55,15 @@ const Hero: React.FC = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mb-12 animate-slide-up">
-            <div className="text-center">
+            <div className="text-center liquid-glass rounded-2xl p-6 hover:liquid-glass-hover">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">4+</div>
               <div className="text-gray-300 text-sm md:text-base">Years Experience</div>
             </div>
-            <div className="text-center">
+            <div className="text-center liquid-glass rounded-2xl p-6 hover:liquid-glass-hover">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300 text-sm md:text-base">Projects Delivered</div>
             </div>
-            <div className="text-center">
+            <div className="text-center liquid-glass rounded-2xl p-6 hover:liquid-glass-hover">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">100%</div>
               <div className="text-gray-300 text-sm md:text-base">Client Satisfaction</div>
             </div>
@@ -73,14 +73,14 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <button
               onClick={scrollToContact}
-              className="btn-primary group flex items-center justify-center space-x-2 text-lg px-8 py-4"
+              className="btn-primary group flex items-center justify-center space-x-2 text-lg px-8 py-4 liquid-glass-button hover:liquid-glass-hover rounded-xl"
             >
               <span>Start Your Project</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={scrollToServices}
-              className="btn-secondary group flex items-center justify-center space-x-2 text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary-900"
+              className="group flex items-center justify-center space-x-2 text-lg px-8 py-4 liquid-glass text-white hover:liquid-glass-hover rounded-xl"
             >
               <span>Explore Services</span>
               <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
               {['.NET', 'React', 'TypeScript', 'PostgreSQL', 'AWS', 'GCP', 'Docker', 'Kubernetes'].map((tech) => (
                 <span
                   key={tech}
-                  className="glass-effect px-4 py-2 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all cursor-default"
+                  className="liquid-glass px-4 py-2 rounded-full text-white text-sm font-medium hover:liquid-glass-hover cursor-default"
                 >
                   {tech}
                 </span>

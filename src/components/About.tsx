@@ -112,7 +112,7 @@ const About: React.FC = () => {
               return (
                 <div
                   key={value.title}
-                  className="card hover:scale-105 text-center group"
+                  className="liquid-glass-card hover:liquid-glass-hover text-center group rounded-2xl p-6"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -137,7 +137,7 @@ const About: React.FC = () => {
             return (
               <div
                 key={stat.label}
-                className="text-center group"
+                className="text-center group liquid-glass rounded-2xl p-6 hover:liquid-glass-hover"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-xl mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -158,7 +158,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 md:p-12 text-white text-center">
+        <div className="liquid-glass-dark rounded-2xl p-8 md:p-12 text-white text-center">
           <h3 className="text-3xl font-bold mb-6">Why Choose BrainFcuk?</h3>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
@@ -184,7 +184,7 @@ const About: React.FC = () => {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center space-x-2"
+            className="liquid-glass-button text-white px-8 py-4 rounded-xl font-semibold text-lg hover:liquid-glass-hover transition-colors inline-flex items-center space-x-2"
           >
             <span>Let's Build Something Amazing</span>
             <Heart className="w-5 h-5" />
