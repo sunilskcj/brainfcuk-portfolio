@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Target, Zap, Users, Trophy, Clock, Globe, Code } from 'lucide-react';
+import { Heart, Target, Zap, Trophy, Globe, Code } from 'lucide-react';
 
 const About: React.FC = () => {
   const values = [
