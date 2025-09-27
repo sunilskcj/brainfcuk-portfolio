@@ -4,32 +4,32 @@ import { Heart, Target, Zap, Users, Trophy, Clock, Globe, Code } from 'lucide-re
 const About: React.FC = () => {
   const values = [
     {
-      icon: Heart,
-      title: 'Passion-Driven',
-      description: 'We pour our hearts into every project, treating your success as our own.'
+      icon: Target,
+      title: 'Outcome-Driven',
+      description: 'Every strategy, design, and development decision is made with measurable outcomes in mind.'
     },
     {
-      icon: Target,
-      title: 'Results-Focused',
-      description: 'Every line of code we write serves a purpose in achieving your business goals.'
+      icon: Heart,
+      title: 'Built with Empathy',
+      description: 'We deeply understand user needs and business challenges to create meaningful solutions.'
     },
     {
       icon: Zap,
-      title: 'Innovation First',
-      description: 'We stay ahead of trends, bringing cutting-edge solutions to traditional problems.'
+      title: 'Purpose-Led Growth',
+      description: 'Sustainable growth through strategic planning and purposeful execution across all channels.'
     },
     {
-      icon: Users,
-      title: 'Client Partnership',
-      description: 'We believe in collaboration, not just delivery. Your vision shapes our execution.'
+      icon: Globe,
+      title: 'Global Expertise',
+      description: 'Serving clients in 30+ countries with adaptable solutions and diverse perspectives.'
     }
   ];
 
   const stats = [
-    { icon: Trophy, value: '4+', label: 'Years Experience', description: 'Industry expertise' },
-    { icon: Clock, value: '24/7', label: 'Dedication', description: 'Always learning' },
-    { icon: Globe, value: '100%', label: 'Remote-First', description: 'Global mindset' },
-    { icon: Code, value: '50+', label: 'Projects', description: 'Successfully delivered' }
+    { icon: Globe, value: '30+', label: 'Countries Served', description: 'Global reach' },
+    { icon: Trophy, value: '4+', label: 'Years Experience', description: 'Combined expertise' },
+    { icon: Target, value: '100%', label: 'ROI-Driven', description: 'Results focused' },
+    { icon: Code, value: '200+', label: 'Projects', description: 'Successfully delivered' }
   ];
 
   return (
@@ -41,8 +41,8 @@ const About: React.FC = () => {
             About <span className="text-gradient">Vox</span>
           </h2>
           <p className="text-body-lg max-w-3xl mx-auto">
-            We're not just another development agency. We're young, passionate professionals
-            who hustle hard to build trust through innovation.
+            We're a full-service digital agency that designs for outcomes, builds with empathy,
+            and grows with purpose. Serving clients globally with comprehensive digital solutions.
           </p>
         </div>
 
@@ -55,19 +55,20 @@ const About: React.FC = () => {
             </h3>
             <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                <strong className="text-raycast-900 dark:text-white">Vox</strong> was born from a simple belief:
-                technology should solve real problems, not create new ones. As young professionals with
-                <strong className="text-primary-600"> 4+ years of industry experience</strong>,
-                we've seen the gap between what businesses need and what they get.
+                <strong className="text-raycast-900 dark:text-white">Vox</strong> is a comprehensive digital agency
+                with <strong className="text-primary-600">4+ years of combined experience</strong> serving clients
+                across <strong className="text-primary-600">30+ countries</strong>. We bridge strategy, design,
+                technology, and marketing to deliver complete digital solutions.
               </p>
               <p>
-                We specialize in <strong className="text-gray-900 dark:text-white">fintech and healthcare</strong>
-                because these industries impact lives. When we build a financial platform or healthcare solution,
-                we're not just writing code – we're enabling businesses to serve people better.
+                Our expertise spans <strong className="text-gray-900 dark:text-white">research & planning,
+                UI/UX design, web & mobile development, e-commerce, and digital marketing</strong>.
+                From startups to enterprises, we adapt our engagement models to meet diverse business needs.
               </p>
               <p>
-                Our approach is different. We don't just deliver projects; we build partnerships.
-                We hustle hard, stay curious, and never stop learning because technology never stops evolving.
+                What sets us apart is our <strong className="text-gray-900 dark:text-white">ROI-driven approach</strong>
+                and commitment to measurable outcomes. We don't just build beautiful products – we create
+                strategic digital assets that drive growth and deliver results.
               </p>
             </div>
 
@@ -75,8 +76,9 @@ const About: React.FC = () => {
             <div className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-xl border-l-4 border-primary-500">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Our Mission</h4>
               <p className="text-gray-700 dark:text-gray-300">
-                To empower startups and businesses with innovative technology solutions that drive growth,
-                build trust, and create lasting impact in their industries.
+                To empower businesses with strategic digital solutions that drive measurable outcomes,
+                foster meaningful connections, and create sustainable growth through innovative design,
+                cutting-edge technology, and data-driven marketing.
               </p>
             </div>
           </div>
@@ -85,9 +87,9 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-2xl p-8 flex flex-col justify-center items-center text-center">
               <div className="text-6xl mb-6">🧠</div>
-              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Think Different</h4>
+              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Full-Service Excellence</h4>
               <p className="text-gray-600 dark:text-gray-300">
-                We challenge conventional approaches and bring fresh perspectives to every project.
+                Strategy, design, technology, and marketing unified under one roof for seamless execution.
               </p>
             </div>
 
@@ -162,20 +164,20 @@ const About: React.FC = () => {
           <h3 className="text-heading mb-8 text-raycast-900 dark:text-white">Why Choose Vox?</h3>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="text-2xl font-bold mb-2">🚀 Fast Delivery</div>
-              <p className="opacity-90">We move fast without compromising quality</p>
+              <div className="text-2xl font-bold mb-2">🌍 Global Reach</div>
+              <p className="opacity-90">Serving clients across 30+ countries with local insights</p>
             </div>
             <div>
-              <div className="text-2xl font-bold mb-2">🎯 Laser Focus</div>
-              <p className="opacity-90">Specialized in fintech, healthcare, and startups</p>
+              <div className="text-2xl font-bold mb-2">📊 ROI-Driven</div>
+              <p className="opacity-90">Every decision backed by data and focused on outcomes</p>
             </div>
             <div>
-              <div className="text-2xl font-bold mb-2">🤝 True Partnership</div>
-              <p className="opacity-90">Your success is our success</p>
+              <div className="text-2xl font-bold mb-2">🔧 Full-Service</div>
+              <p className="opacity-90">Complete digital solutions from strategy to execution</p>
             </div>
           </div>
           <p className="text-xl mb-8 opacity-90">
-            Ready to work with a team that's as passionate about your project as you are?
+            Ready to partner with a digital agency that delivers measurable results across strategy, design, technology, and marketing?
           </p>
           <button
             onClick={() => {

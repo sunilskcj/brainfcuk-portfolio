@@ -30,28 +30,29 @@ const Hero: React.FC = () => {
           {/* Main Heading */}
           <div className="mb-12 animate-fade-in">
             <h1 className="text-display mb-8">
-              <span className="block">Your shortcut to</span>
-              <span className="text-gradient">digital excellence</span>
+              <span className="block">Design for Outcomes.</span>
+              <span className="block">Build with <span className="text-gradient">Empathy</span>.</span>
+              <span className="block">Grow with Purpose.</span>
             </h1>
             <p className="text-body-lg max-w-3xl mx-auto mb-8">
-              Vox delivers cutting-edge web applications, mobile solutions, and cloud consulting.
-              4+ years of experience building trust through innovation for startups, fintech, and healthcare.
+              Vox is a full-service digital agency delivering comprehensive solutions across strategy, design, technology, and marketing.
+              We serve clients globally with ROI-driven approaches and cutting-edge expertise.
             </p>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 mb-16 animate-slide-up max-w-2xl">
             <div className="text-center card-glass py-8 px-4">
+              <div className="text-3xl font-bold text-raycast-900 dark:text-white mb-2">30+</div>
+              <div className="text-body text-sm">Countries Served</div>
+            </div>
+            <div className="text-center card-glass py-8 px-4">
               <div className="text-3xl font-bold text-raycast-900 dark:text-white mb-2">4+</div>
               <div className="text-body text-sm">Years Experience</div>
             </div>
             <div className="text-center card-glass py-8 px-4">
-              <div className="text-3xl font-bold text-raycast-900 dark:text-white mb-2">50+</div>
-              <div className="text-body text-sm">Projects Delivered</div>
-            </div>
-            <div className="text-center card-glass py-8 px-4">
               <div className="text-3xl font-bold text-raycast-900 dark:text-white mb-2">100%</div>
-              <div className="text-body text-sm">Client Satisfaction</div>
+              <div className="text-body text-sm">ROI-Driven</div>
             </div>
           </div>
 
@@ -73,16 +74,16 @@ const Hero: React.FC = () => {
             </button>
           </div>
 
-          {/* Tech Stack Preview */}
+          {/* Service Areas Preview */}
           <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
-            <p className="text-body mb-6">Powered by cutting-edge technologies</p>
-            <div className="flex flex-wrap justify-center gap-3 max-w-2xl">
-              {['.NET', 'React', 'TypeScript', 'PostgreSQL', 'AWS', 'GCP', 'Docker', 'Kubernetes'].map((tech) => (
+            <p className="text-body mb-6">Full-service digital solutions</p>
+            <div className="flex flex-wrap justify-center gap-3 max-w-3xl">
+              {['Strategy & Planning', 'UI/UX Design', 'Web Development', 'Mobile Apps', 'E-commerce', 'SEO & Marketing', 'Cloud Solutions', 'WordPress'].map((service) => (
                 <span
-                  key={tech}
+                  key={service}
                   className="card-glass px-4 py-2 text-sm font-medium text-raycast-700 dark:text-raycast-300 hover:bg-white/90 dark:hover:bg-raycast-800/90 transition-colors cursor-default"
                 >
-                  {tech}
+                  {service}
                 </span>
               ))}
             </div>

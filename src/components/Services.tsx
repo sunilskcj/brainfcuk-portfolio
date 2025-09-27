@@ -20,10 +20,10 @@ const Services: React.FC = () => {
 
   const categories = [
     { id: 'all', label: 'All Services' },
-    { id: 'strategy-design', label: 'Strategy' },
-    { id: 'development', label: 'Development' },
-    { id: 'infrastructure', label: 'Infrastructure' },
-    { id: 'growth', label: 'Growth' }
+    { id: 'strategy', label: 'Strategy' },
+    { id: 'design', label: 'Design' },
+    { id: 'technology', label: 'Technology' },
+    { id: 'marketing', label: 'Marketing' }
   ];
 
   const filteredServices = activeCategory === 'all'
@@ -31,10 +31,10 @@ const Services: React.FC = () => {
     : SERVICES.filter(service => {
         // Map service IDs to categories
         const categoryMap: { [key: string]: string[] } = {
-          'strategy-design': ['consulting'],
-          'development': ['web-development', 'mobile-development'],
-          'infrastructure': ['cloud-solutions'],
-          'growth': []
+          'strategy': ['research-planning', 'system-analysis', 'ux-prototyping', 'technical-consultation'],
+          'design': ['branding', 'ui-design', 'graphic-design'],
+          'technology': ['web-development', 'mobile-development', 'ecommerce-solutions', 'wordpress-development', 'cloud-solutions'],
+          'marketing': ['seo-optimization', 'sem-advertising', 'social-media-marketing', 'social-media-advertising']
         };
         return categoryMap[activeCategory]?.includes(service.id) || false;
       });
@@ -56,7 +56,7 @@ const Services: React.FC = () => {
   );
 
   return (
-    <section id="services" className="section-padding bg-gray-50 dark:bg-gray-900">
+    <section id="services" className="section-padding bg-gray-50 dark:bg-gray-900 bg-code-symbols terminal-cursor">
       <div className="container-custom">
         {/* Header with Category Tabs */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
