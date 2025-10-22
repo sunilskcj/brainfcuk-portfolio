@@ -1,3 +1,8 @@
+// Type aliases for better type safety
+export type Status = 'completed' | 'in-progress' | 'planned';
+export type ProjectCategory = 'web' | 'mobile' | 'cloud' | 'fintech';
+export type TechnologyCategory = 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'devops';
+
 export interface Service {
   id: string;
   title: string;
@@ -10,8 +15,8 @@ export interface Service {
 export interface Technology {
   name: string;
   icon: string;
-  category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'devops';
-  proficiency: number;
+  category: TechnologyCategory;
+  proficiency: number; // 0-100
 }
 
 export interface Project {
@@ -21,10 +26,10 @@ export interface Project {
   longDescription: string;
   image: string;
   technologies: string[];
-  category: 'web' | 'mobile' | 'cloud' | 'fintech';
+  category: ProjectCategory;
   demoUrl?: string;
   codeUrl?: string;
-  status: 'completed' | 'in-progress' | 'planned';
+  status: Status;
 }
 
 export interface TeamMember {
@@ -44,10 +49,22 @@ export interface TeamMember {
 export interface ContactFormData {
   name: string;
   email: string;
+  projectType: string;
+  message: string;
   company?: string;
   phone?: string;
-  projectType: string;
-  budget: string;
-  message: string;
-  timeline: string;
+  budget?: string; // Made optional
+  timeline?: string; // Made optional
+}
+
+// Additional utility types
+export interface NavItem {
+  name: string;
+  href: string;
+}
+
+export interface SocialLinks {
+  github?: string;
+  linkedin?: string;
+  twitter?: string;
 }
