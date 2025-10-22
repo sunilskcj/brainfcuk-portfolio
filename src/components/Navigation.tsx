@@ -32,7 +32,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50 flex justify-center pt-4">
+    <nav className="fixed w-full top-0 z-50 flex justify-center pt-4" role="navigation" aria-label="Main navigation">
       <div className={`transition-all duration-300 rounded-2xl px-6 py-3 ${
         isScrolled
           ? 'backdrop-blur-lg bg-white/[0.02] dark:bg-white/[0.015] border border-white/10 dark:border-white/5 shadow-sm'
@@ -71,12 +71,14 @@ const Navigation: React.FC = () => {
             <button
               onClick={toggleTheme}
               className="p-2.5 rounded-lg bg-raycast-100 dark:bg-raycast-800 hover:bg-raycast-200 dark:hover:bg-raycast-700 transition-colors duration-200 border border-raycast-300 dark:border-raycast-700"
-              aria-label="Toggle theme"
+              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+              aria-pressed={isDarkMode}
+              type="button"
             >
               {isDarkMode ? (
-                <Sun className="h-4 w-4 text-amber-500" />
+                <Sun className="h-4 w-4 text-amber-500" aria-hidden="true" />
               ) : (
-                <Moon className="h-4 w-4 text-raycast-600" />
+                <Moon className="h-4 w-4 text-raycast-600" aria-hidden="true" />
               )}
             </button>
 
@@ -85,11 +87,15 @@ const Navigation: React.FC = () => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2.5 rounded-lg bg-raycast-100 dark:bg-raycast-800 hover:bg-raycast-200 dark:hover:bg-raycast-700 border border-raycast-300 dark:border-raycast-700 focus:outline-none transition-colors duration-200"
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
+                type="button"
               >
                 {isMenuOpen ? (
-                  <X className="h-4 w-4 text-raycast-600 dark:text-raycast-400" />
+                  <X className="h-4 w-4 text-raycast-600 dark:text-raycast-400" aria-hidden="true" />
                 ) : (
-                  <Menu className="h-4 w-4 text-raycast-600 dark:text-raycast-400" />
+                  <Menu className="h-4 w-4 text-raycast-600 dark:text-raycast-400" aria-hidden="true" />
                 )}
               </button>
             </div>
@@ -100,8 +106,8 @@ const Navigation: React.FC = () => {
 
       {/* Mobile Navigation - Positioned outside the floating container */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-80">
-          <div className="card-glass rounded-xl p-3 shadow-xl">
+        <div id="mobile-menu" className="md:hidden absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-80">
+          <div className="card-glass rounded-xl p-3 shadow-xl" role="menu">
             {navItems.map((item) => (
               <button
                 key={item.name}
